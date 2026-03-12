@@ -26,11 +26,11 @@ function cn(...inputs: ClassValue[]) {
 
 const navItems = [
   { name: 'Dashboard', icon: LayoutDashboard, href: '/' },
-  { name: 'Pomodoro', icon: Timer, href: '/timer' },
-  { name: 'Summary AI', icon: FileText, href: '/summary' },
-  { name: 'Focus Audio', icon: Headphones, href: '/audio' },
-  { name: 'Tasks', icon: CheckSquare, href: '/tasks' },
-  { name: 'Statistics', icon: BarChart3, href: '/stats' },
+  { name: 'Timer Fokus', icon: Timer, href: '/timer' },
+  { name: 'Ringkasan AI', icon: FileText, href: '/summary' },
+  { name: 'Audio Fokus', icon: Headphones, href: '/audio' },
+  { name: 'Daftar Tugas', icon: CheckSquare, href: '/tasks' },
+  { name: 'Statistik', icon: BarChart3, href: '/stats' },
 ];
 
 export default function DashboardLayout({
@@ -135,7 +135,9 @@ export default function DashboardLayout({
                     exit={{ opacity: 0, width: 0 }}
                     className="ml-4 font-medium"
                   >
-                    {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+                    <span>
+                      {isDarkMode ? 'Mode Terang' : 'Mode Gelap'}
+                    </span>
                   </motion.span>
                 )}
               </AnimatePresence>
@@ -150,7 +152,7 @@ export default function DashboardLayout({
                     exit={{ opacity: 0, width: 0 }}
                     className="ml-4 font-medium"
                   >
-                    Settings
+                    Pengaturan
                   </motion.span>
                 )}
               </AnimatePresence>

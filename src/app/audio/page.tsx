@@ -6,8 +6,8 @@ export default function AudioPage() {
     <DashboardLayout>
       <div className="max-w-2xl mx-auto space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight">Focus Audio Station</h2>
-          <p className="text-foreground/60">Ciptakan suasana belajar yang tenang dengan koleksi ambient audio kami.</p>
+          <h2 className="text-3xl font-bold tracking-tight">Stasiun Audio Fokus</h2>
+          <p className="text-foreground/60">Ciptakan suasana belajar yang tenang dengan koleksi suara ambien kami.</p>
         </div>
         <AudioStation />
       </div>

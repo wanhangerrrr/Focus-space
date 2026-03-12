@@ -68,8 +68,8 @@ export default function SummaryTool() {
   return (
     <div className="space-y-8 pb-12">
       <div className="space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">Smart Summary AI</h2>
-        <p className="text-foreground/60">Tingkatkan pemahamanmu dengan ringkasan otomatis 5W+1H.</p>
+        <h2 className="text-3xl font-bold tracking-tight">Ringkasan AI Pintar</h2>
+        <p className="text-foreground/60">Tingkatkan pemahaman Anda dengan ringkasan otomatis 5W+1H.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -199,10 +199,10 @@ export default function SummaryTool() {
                     Hasil Ringkasan 5W+1H
                   </h3>
                   <div className="flex gap-2">
-                    <button className="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors" title="Copy">
+                    <button className="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors" title="Salin">
                       <Copy size={18} />
                     </button>
-                    <button className="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors" title="Download">
+                    <button className="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors" title="Unduh">
                       <Download size={18} />
                     </button>
                   </div>
@@ -210,12 +210,12 @@ export default function SummaryTool() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { label: 'What', value: result.what, color: 'border-blue-200 bg-blue-50/30' },
-                    { label: 'Who', value: result.who, color: 'border-green-200 bg-green-50/30' },
-                    { label: 'When', value: result.when, color: 'border-purple-200 bg-purple-50/30' },
-                    { label: 'Where', value: result.where, color: 'border-orange-200 bg-orange-50/30' },
-                    { label: 'Why', value: result.why, color: 'border-red-200 bg-red-50/30' },
-                    { label: 'How', value: result.how, color: 'border-teal-200 bg-teal-50/30' },
+                    { label: 'Apa (What)', value: result.what, color: 'border-blue-200 bg-blue-50/30' },
+                    { label: 'Siapa (Who)', value: result.who, color: 'border-green-200 bg-green-50/30' },
+                    { label: 'Kapan (When)', value: result.when, color: 'border-purple-200 bg-purple-50/30' },
+                    { label: 'Dimana (Where)', value: result.where, color: 'border-orange-200 bg-orange-50/30' },
+                    { label: 'Mengapa (Why)', value: result.why, color: 'border-red-200 bg-red-50/30' },
+                    { label: 'Bagaimana (How)', value: result.how, color: 'border-teal-200 bg-teal-50/30' },
                   ].map((item, i) => (
                     <motion.div
                       key={item.label}

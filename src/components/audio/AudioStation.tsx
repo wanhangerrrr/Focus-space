@@ -11,11 +11,11 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const sounds = [
-  { id: 'rain', name: 'Heavy Rain', icon: CloudRain, color: 'text-blue-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' }, // Placeholder URLs
-  { id: 'cafe', name: 'Paris Cafe', icon: Coffee, color: 'text-orange-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
-  { id: 'wind', name: 'White Noise', icon: Wind, color: 'text-slate-300', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
-  { id: 'nature', name: 'Forest Birds', icon: Trees, color: 'text-green-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' },
-  { id: 'lofi', name: 'Lo-Fi Chill', icon: Music, color: 'text-purple-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3' },
+  { id: 'rain', name: 'Hujan Deras', icon: CloudRain, color: 'text-blue-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' }, 
+  { id: 'cafe', name: 'Suasana Kafe', icon: Coffee, color: 'text-orange-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
+  { id: 'wind', name: 'Noise Putih', icon: Wind, color: 'text-slate-300', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
+  { id: 'nature', name: 'Hutan Tropis', icon: Trees, color: 'text-green-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' },
+  { id: 'lofi', name: 'Lo-Fi Tenang', icon: Music, color: 'text-purple-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3' },
 ];
 
 export default function AudioStation() {
@@ -45,7 +45,7 @@ export default function AudioStation() {
     <div className="glass-morphism p-6 rounded-[2rem] w-full">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h3 className="text-xl font-bold tracking-tight">Audio Station</h3>
+          <h3 className="text-xl font-bold tracking-tight">Stasiun Audio</h3>
           <p className="text-sm text-foreground/50">Temukan ritme fokusmu</p>
         </div>
         <div className="flex items-center gap-3">
@@ -88,7 +88,7 @@ export default function AudioStation() {
                 {sound.name}
               </span>
               <span className="text-xs text-foreground/40 font-medium uppercase tracking-wider">
-                Ambient Focus
+                Ambien Fokus
               </span>
             </div>
             {activeSound === sound.id && isPlaying && (
@@ -120,7 +120,7 @@ export default function AudioStation() {
             </div>
             <div className="flex-1 overflow-hidden">
               <p className="text-sm font-bold truncate tracking-tight">{currentSound?.name}</p>
-              <p className="text-xs text-foreground/50">Now playing ambient...</p>
+              <p className="text-xs text-foreground/50">Sekarang memutar ambien...</p>
             </div>
             <button 
               onClick={() => setIsPlaying(!isPlaying)}

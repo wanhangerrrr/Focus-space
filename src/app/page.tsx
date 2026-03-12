@@ -12,7 +12,7 @@ export default function Home() {
         <div className="lg:col-span-8 space-y-8">
           <div className="space-y-2">
             <h1 className="text-4xl font-bold tracking-tight">
-              Selamat Datang, <span className="text-gradient">Hafiz</span> 🌿
+              Selamat Datang, <span className="text-gradient">Hafiz</span>
             </h1>
             <p className="text-foreground/60 text-lg">
               Siap untuk sesi belajar produktif hari ini?
@@ -23,12 +23,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { label: 'Waktu Fokus', value: '2j 10m', icon: '⏱️' },
-              { label: 'Sesi Selesai', value: '4', icon: '✅' },
-              { label: 'Streak', value: '5 Hari', icon: '🔥' },
+              { label: 'Waktu Fokus', value: '2j 10m', icon: null },
+              { label: 'Sesi Selesai', value: '4', icon: null },
+              { label: 'Streak', value: '5 Hari', icon: null },
             ].map((stat, i) => (
               <div key={i} className="glass-morphism p-6 rounded-2xl flex flex-col items-center justify-center text-center">
-                <span className="text-2xl mb-2">{stat.icon}</span>
                 <span className="text-sm font-medium text-foreground/50">{stat.label}</span>
                 <span className="text-2xl font-bold">{stat.value}</span>
               </div>

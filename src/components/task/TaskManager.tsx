@@ -30,7 +30,7 @@ export default function TaskManager() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h3 className="text-2xl font-bold tracking-tight">Tugas Hari Ini</h3>
-          <p className="text-foreground/50 text-sm">Target fokusmu hari ini</p>
+          <p className="text-foreground/50 text-sm">Target fokus harian Anda</p>
         </div>
         <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-primary text-sm font-bold">
           <Calendar size={16} />

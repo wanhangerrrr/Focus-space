@@ -39,7 +39,7 @@ export default function PomodoroTimer() {
       
       // Notify (basic for now)
       if (Notification.permission === "granted") {
-        new Notification("Focus Session Complete!", { body: "Time for a well-deserved break 🌿" });
+        new Notification("Sesi Fokus Selesai!", { body: "Waktunya istirahat sejenak" });
       }
       
       setMode('short-break');
@@ -88,9 +88,9 @@ export default function PomodoroTimer() {
       {/* Mode Switcher */}
       <div className="flex gap-2 mb-8 bg-background/50 p-1 rounded-2xl border border-white/10">
         {[
-          { id: 'focus', label: 'Focus', icon: Brain },
-          { id: 'short-break', label: 'Short Break', icon: Coffee },
-          { id: 'long-break', label: 'Long Break', icon: Moon },
+          { id: 'focus', label: 'Fokus', icon: Brain },
+          { id: 'short-break', label: 'Istirahat Pendek', icon: Coffee },
+          { id: 'long-break', label: 'Istirahat Panjang', icon: Moon },
         ].map((m) => (
           <button
             key={m.id}
@@ -149,7 +149,7 @@ export default function PomodoroTimer() {
             {formatTime(timeLeft)}
           </motion.h2>
           <p className="text-foreground/40 mt-2 font-medium uppercase tracking-[0.2em] text-xs">
-            {mode === 'focus' ? 'Staying Focused' : 'Time for Break'}
+            {mode === 'focus' ? 'Sedang Fokus' : 'Waktunya Istirahat'}
           </p>
         </div>
 
