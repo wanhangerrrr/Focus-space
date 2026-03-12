@@ -39,7 +39,7 @@ export default function Home() {
 
         {/* Right Column - Timer & Quick Actions */}
         <div className="lg:col-span-4 space-y-8">
-          <PomodoroTimer />
+          <PomodoroTimer variant="compact" />
           <AudioStation />
         </div>
       </div>
