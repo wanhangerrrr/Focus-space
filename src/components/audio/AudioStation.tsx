@@ -16,6 +16,7 @@ const sounds = [
   { id: 'wind', name: 'Noise Putih', icon: Wind, color: 'text-slate-300', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
   { id: 'nature', name: 'Hutan Tropis', icon: Trees, color: 'text-green-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' },
   { id: 'lofi', name: 'Lo-Fi Tenang', icon: Music, color: 'text-purple-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3' },
+  { id: 'sal-priadi', name: 'Sal Priadi - Ada Titik-Titik di Ujung Doa', icon: Music, color: 'text-rose-400', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3' },
 ];
 
 export default function AudioStation() {
