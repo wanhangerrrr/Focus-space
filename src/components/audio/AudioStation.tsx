@@ -42,13 +42,13 @@ export default function AudioStation() {
   const currentSound = sounds.find(s => s.id === activeSound);
 
   return (
-    <div className="glass-morphism p-6 rounded-[2rem] w-full">
-      <div className="flex items-center justify-between mb-8">
+    <div className="glass-morphism p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] w-full">
+      <div className="flex items-center justify-between mb-6 md:mb-8">
         <div>
-          <h3 className="text-xl font-bold tracking-tight">Stasiun Audio</h3>
-          <p className="text-sm text-foreground/50">Temukan ritme fokusmu</p>
+          <h3 className="text-lg md:text-xl font-bold tracking-tight">Stasiun Audio</h3>
+          <p className="text-xs md:text-sm text-foreground/50">Temukan ritme fokusmu</p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           {isPlaying ? <Volume2 size={18} className="text-primary animate-pulse" /> : <VolumeX size={18} className="text-foreground/30" />}
           <input
             type="range"

@@ -26,13 +26,13 @@ export default function TaskManager() {
   };
 
   return (
-    <div className="glass-morphism p-8 rounded-[2.5rem] w-full min-h-[500px] flex flex-col">
-      <div className="flex items-center justify-between mb-8">
+    <div className="glass-morphism p-4 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] w-full min-h-[400px] flex flex-col">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 md:mb-8">
         <div>
-          <h3 className="text-2xl font-bold tracking-tight">Tugas Hari Ini</h3>
-          <p className="text-foreground/50 text-sm">Target fokus harian Anda</p>
+          <h3 className="text-xl md:text-2xl font-bold tracking-tight">Tugas Hari Ini</h3>
+          <p className="text-foreground/50 text-xs md:text-sm">Target fokus harian Anda</p>
         </div>
-        <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-primary text-sm font-bold">
+        <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-primary text-xs md:text-sm font-bold w-fit">
           <Calendar size={16} />
           {new Date().toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'short' })}
         </div>

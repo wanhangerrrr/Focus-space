@@ -55,13 +55,13 @@ export default function DashboardLayout({
       {/* Background Decorative Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-] w-[40%] h-[40%] rounded-full bg-accent/10 blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accent/10 blur-[120px]" />
         <div className="absolute top-[30%] right-[10%] w-[30%] h-[30%] rounded-full bg-secondary/10 blur-[120px]" />
       </div>
 
-      {/* Sidebar */}
+      {/* Desktop Sidebar */}
       <aside className={cn(
-        "fixed top-0 left-0 h-full z-50 transition-all duration-500 ease-in-out glass-morphism border-r transition-[width]",
+        "fixed top-0 left-0 h-full z-50 transition-all duration-500 ease-in-out glass-morphism border-r transition-[width] hidden md:block",
         isSidebarOpen ? "w-64" : "w-20"
       )}>
         <div className="flex flex-col h-full p-4">
@@ -161,10 +161,42 @@ export default function DashboardLayout({
         </div>
       </aside>
 
+      {/* Mobile Top Bar */}
+      <header className="md:hidden fixed top-0 left-0 right-0 z-50 glass-morphism h-16 px-6 flex items-center justify-between border-b">
+        <span className="font-bold text-xl tracking-tight text-gradient">
+          FocusSpace
+        </span>
+        <button 
+          onClick={toggleTheme}
+          className="p-2 rounded-lg hover:bg-primary/10 transition-colors"
+        >
+          {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+      </header>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="md:hidden fixed bottom-4 left-4 right-4 z-50 glass-morphism rounded-2xl p-2 flex items-center justify-around gap-1 border shadow-2xl">
+        {navItems.map((item) => {
+          const isActive = pathname === item.href;
+          return (
+            <Link key={item.name} href={item.href} className="flex-1">
+              <div className={cn(
+                "flex flex-col items-center justify-center p-2 rounded-xl transition-all duration-300",
+                isActive 
+                  ? "bg-primary text-white shadow-lg" 
+                  : "text-foreground/50 hover:text-primary"
+              )}>
+                <item.icon size={20} />
+              </div>
+            </Link>
+          );
+        })}
+      </nav>
+
       {/* Main Content */}
       <main className={cn(
-        "transition-all duration-500 ease-in-out p-8",
-        isSidebarOpen ? "ml-64" : "ml-20"
+        "transition-all duration-500 ease-in-out p-4 md:p-8 pt-20 md:pt-8 mb-20 md:mb-0",
+        isSidebarOpen ? "md:ml-64" : "md:ml-20"
       )}>
         <div className="max-w-7xl mx-auto pt-4">
           <motion.div

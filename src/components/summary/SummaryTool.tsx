@@ -68,8 +68,8 @@ export default function SummaryTool() {
   return (
     <div className="space-y-8 pb-12">
       <div className="space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">Ringkasan AI Pintar</h2>
-        <p className="text-foreground/60">Tingkatkan pemahaman Anda dengan ringkasan otomatis 5W+1H.</p>
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Ringkasan AI Pintar</h2>
+        <p className="text-sm md:text-base text-foreground/60">Tingkatkan pemahaman Anda dengan ringkasan otomatis 5W+1H.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
